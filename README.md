@@ -300,7 +300,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 For questions or support, reach out to me:
 
 - **GitHub**: [@Dhiraj706Sardar](https://github.com/Dhiraj706Sardar)
-- **LinkedIn**: [Dhiraj Sardar](https://linkedin.com/in/dhiraj-sardar)
+- **LinkedIn**: [Dhiraj Sardar](https://www.linkedin.com/in/dhiraj-sardar/)
 - **Email**: [dhiraj.sardar@example.com](mailto:sardardhiraj706@gmail.com)
 
 Feel free to open an issue on this repository for bugs or feature requests.
