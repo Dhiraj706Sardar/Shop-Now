@@ -297,4 +297,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-For questions or support, please open an issue on GitHub.
+For questions or support, reach out to me:
+
+- **GitHub**: [@Dhiraj706Sardar](https://github.com/Dhiraj706Sardar)
+- **LinkedIn**: [Dhiraj Sardar](https://linkedin.com/in/dhiraj-sardar)
+- **Email**: [dhiraj.sardar@example.com](mailto:sardardhiraj706@gmail.com)
+
+Feel free to open an issue on this repository for bugs or feature requests.
