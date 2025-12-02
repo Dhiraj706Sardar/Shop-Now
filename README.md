@@ -1,5 +1,9 @@
 # E-Commerce Flutter App
 
+[![CI - Build & Test](https://github.com/Dhiraj706Sardar/ecom/workflows/CI%20-%20Build%20%26%20Test/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/ci.yml)
+[![CD - Release & Deploy](https://github.com/Dhiraj706Sardar/ecom/workflows/CD%20-%20Release%20%26%20Deploy/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/cd.yml)
+[![Code Quality](https://github.com/Dhiraj706Sardar/ecom/workflows/Code%20Quality%20Checks/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/code-quality.yml)
+
 A production-ready Flutter e-commerce application built with **Clean Architecture**, featuring:
 
 - ✅ **Clean Architecture** (data, domain, presentation layers)
@@ -112,7 +116,52 @@ Run code generation whenever you:
 - Add/modify routes
 - Add/modify injectable classes
 
-## 📦 Features
+## � CI/CD Pipeline
+
+This project includes a comprehensive GitHub Actions CI/CD pipeline:
+
+### Workflows
+
+- **CI (Continuous Integration)**: Runs on every push/PR
+  - Code formatting and analysis
+  - Automated testing with coverage
+  - Multi-platform builds (Android, iOS, Web)
+  
+- **CD (Continuous Deployment)**: Runs on version tags
+  - Creates GitHub Releases
+  - Builds production APK and AAB
+  - Deploys web app to GitHub Pages
+  
+- **Code Quality**: Runs on pull requests
+  - Code metrics analysis
+  - Dependency security review
+  - TODO/FIXME tracking
+  
+- **Nightly Build**: Runs daily at 2 AM UTC
+  - Dependency update checks
+  - Full test suite
+  - Artifact generation
+
+### Creating a Release
+
+To create a new release:
+
+```bash
+# Tag your commit with a version
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+This will automatically:
+1. Build production APK and AAB
+2. Create a GitHub Release
+3. Deploy web app to GitHub Pages
+
+### Documentation
+
+For detailed CI/CD documentation, see [CI/CD Documentation](.github/CI_CD_DOCUMENTATION.md).
+
+## �📦 Features
 
 ### 1. Authentication (Supabase)
 - Email/password sign in
@@ -301,6 +350,6 @@ For questions or support, reach out to me:
 
 - **GitHub**: [@Dhiraj706Sardar](https://github.com/Dhiraj706Sardar)
 - **LinkedIn**: [Dhiraj Sardar](https://www.linkedin.com/in/dhiraj-sardar/)
-- **Email**: [dhiraj.sardar@example.com](mailto:sardardhiraj706@gmail.com)
+- **Email**: [sardardhiraj706@gmail.com](mailto:sardardhiraj706@gmail.com)
 
 Feel free to open an issue on this repository for bugs or feature requests.
