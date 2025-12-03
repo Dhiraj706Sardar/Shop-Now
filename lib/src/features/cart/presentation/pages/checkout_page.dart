@@ -287,24 +287,26 @@ class _CheckoutPageState extends State<CheckoutPage> {
             color: AppTheme.surfaceColor,
             borderRadius: BorderRadius.circular(AppTheme.radiusLg),
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SuccessAnimationWidget(
-                title: 'Order Placed!',
-                message: 'Your order has been placed successfully.',
-                onComplete: () {
-                  // Optional: auto navigate
-                },
-              ),
-              const SizedBox(height: AppTheme.spacingMd),
-              PrimaryButton(
-                text: 'Continue Shopping',
-                onPressed: () {
-                  context.router.replaceAll([const HomeRoute()]);
-                },
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SuccessAnimationWidget(
+                  title: 'Order Placed!',
+                  message: 'Your order has been placed successfully.',
+                  onComplete: () {
+                    // Optional: auto navigate
+                  },
+                ),
+                const SizedBox(height: AppTheme.spacingMd),
+                PrimaryButton(
+                  text: 'Continue Shopping',
+                  onPressed: () {
+                    context.router.replaceAll([const HomeRoute()]);
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

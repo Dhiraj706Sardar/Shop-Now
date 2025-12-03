@@ -408,46 +408,48 @@ class _ProductDetailsShimmer extends StatelessWidget {
                   top: Radius.circular(AppTheme.radiusXl),
                 ),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: AppTheme.spacingLg),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ShimmerBox(
-                        width: 100,
-                        height: 24,
-                        borderRadius: AppTheme.radiusMd,
-                      ),
-                      ShimmerBox(
-                        width: 80,
-                        height: 20,
-                        borderRadius: AppTheme.radiusMd,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: AppTheme.spacingMd),
-                  const ShimmerBox(
-                    width: double.infinity,
-                    height: 32,
-                  ),
-                  const SizedBox(height: AppTheme.spacingSm),
-                  const ShimmerBox(
-                    width: 200,
-                    height: 32,
-                  ),
-                  const SizedBox(height: AppTheme.spacingLg),
-                  const ShimmerBox(
-                    width: 100,
-                    height: 24,
-                  ),
-                  const SizedBox(height: AppTheme.spacingMd),
-                  const ShimmerBox(
-                    width: double.infinity,
-                    height: 100,
-                  ),
-                ],
+              child: const SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: AppTheme.spacingLg),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ShimmerBox(
+                          width: 100,
+                          height: 24,
+                          borderRadius: AppTheme.radiusMd,
+                        ),
+                        ShimmerBox(
+                          width: 80,
+                          height: 20,
+                          borderRadius: AppTheme.radiusMd,
+                        ),
+                      ],
+                    ),
+                     SizedBox(height: AppTheme.spacingMd),
+                     ShimmerBox(
+                      width: double.infinity,
+                      height: 32,
+                    ),
+                     SizedBox(height: AppTheme.spacingSm),
+                     ShimmerBox(
+                      width: 200,
+                      height: 32,
+                    ),
+                     SizedBox(height: AppTheme.spacingLg),
+                    ShimmerBox(
+                      width: 100,
+                      height: 24,
+                    ),
+                    const SizedBox(height: AppTheme.spacingMd),
+                    const ShimmerBox(
+                      width: double.infinity,
+                      height: 100,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
