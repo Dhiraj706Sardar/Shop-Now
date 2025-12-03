@@ -319,6 +319,8 @@ create policy "Users can create own orders"
   on orders for insert
   with check (auth.uid() = user_id);
 ```
+```Demo Video link : https://www.youtube.com/watch?v=r-IYxc9MPZg
+```
 
 ## 📄 License
 
