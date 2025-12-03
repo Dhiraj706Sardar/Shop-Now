@@ -1,8 +1,5 @@
 # E-Commerce Flutter App
 
-[![CI - Build & Test](https://github.com/Dhiraj706Sardar/ecom/workflows/CI%20-%20Build%20%26%20Test/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/ci.yml)
-[![CD - Release & Deploy](https://github.com/Dhiraj706Sardar/ecom/workflows/CD%20-%20Release%20%26%20Deploy/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/cd.yml)
-[![Code Quality](https://github.com/Dhiraj706Sardar/ecom/workflows/Code%20Quality%20Checks/badge.svg)](https://github.com/Dhiraj706Sardar/ecom/actions/workflows/code-quality.yml)
 
 A production-ready Flutter e-commerce application built with **Clean Architecture**, featuring:
 
@@ -291,19 +288,6 @@ This project follows **Clean Architecture** principles:
 ```bash
 flutter test
 ```
-
-## 📝 TODO
-
-- [ ] Implement UI for all pages
-- [ ] Add search functionality
-- [ ] Add filters and sorting
-- [ ] Implement payment integration
-- [ ] Add product reviews
-- [ ] Add user profile management
-- [ ] Add order tracking
-- [ ] Implement push notifications
-- [ ] Add analytics
-- [ ] Add error tracking (Sentry)
 
 ## 🔐 Supabase Setup
 
