@@ -319,8 +319,14 @@ create policy "Users can create own orders"
   on orders for insert
   with check (auth.uid() = user_id);
 ```
-```Demo Video link : https://www.youtube.com/watch?v=r-IYxc9MPZg
-```
+## 🎥 Demo Video
+
+<a href="https://www.youtube.com/watch?v=r-IYxc9MPZg" target="_blank">
+  <img src="https://img.youtube.com/vi/r-IYxc9MPZg/maxresdefault.jpg" 
+       alt="E-Commerce Flutter App Demo Video"
+       style="width:100%; max-width:700px; border-radius:10px;">
+</a>
+
 
 ## 📄 License
 
