@@ -1,8 +1,8 @@
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
-import '../../../../core/constants/hive_constants.dart';
-import '../../../../core/errors/exceptions.dart';
-import '../models/cart_item_model.dart';
+import 'package:ecommerce_app/src/core/constants/hive_constants.dart';
+import 'package:ecommerce_app/src/core/errors/exceptions.dart';
+import 'package:ecommerce_app/src/features/cart/data/models/cart_item_model.dart';
 
 abstract class CartLocalDataSource {
   Future<List<CartItemModel>> getCartItems();
@@ -14,10 +14,8 @@ abstract class CartLocalDataSource {
 
 @LazySingleton(as: CartLocalDataSource)
 class CartLocalDataSourceImpl implements CartLocalDataSource {
-  final Box<CartItemModel> _cartBox;
-
   CartLocalDataSourceImpl(@Named(HiveConstants.cartBox) this._cartBox);
-
+  final Box<CartItemModel> _cartBox;
   @override
   Future<List<CartItemModel>> getCartItems() async {
     try {

@@ -32,7 +32,7 @@ class LottieAnimationWidget extends StatelessWidget {
       errorBuilder: (context, error, stackTrace) {
         // Fallback to a simple animated icon if Lottie file is not found
         return Icon(
-          Icons.animation,
+          Icons.shop_2_sharp,
           size: width ?? height ?? 100,
           color: AppTheme.primaryColor,
         );

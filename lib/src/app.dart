@@ -10,9 +10,8 @@ import 'package:ecommerce_app/src/features/wishlist/presentation/cubit/wishlist_
 import 'package:ecommerce_app/src/router/app_router.dart';
 
 class App extends StatelessWidget {
-  final AppRouter appRouter;
-
   const App({required this.appRouter, super.key});
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
