@@ -289,10 +289,10 @@ create policy "Users can create own orders"
 
 |   |   |
 |---|---|
-| <img src="screenshots/Screenshot from 2025-12-12 20-36-48.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-37-30.png" width="300" /> |
-| <img src="screenshots/Screenshot from 2025-12-12 20-37-35.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-13.png" width="300" /> |
-| <img src="screenshots/Screenshot from 2025-12-12 20-38-29.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-34.png" width="300" /> |
-| <img src="screenshots/Screenshot from 2025-12-12 20-38-45.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-55.png" width="300" /> |
+| <img src="screenshots/Screenshot%20from%202025-12-12%2020-36-48.png" width="300" /> | <img src="screenshots/Screenshot%20from%202025-12-12%2020-37-30.png" width="300" /> |
+| <img src="screenshots/Screenshot%20from%202025-12-12%2020-37-35.png" width="300" /> | <img src="screenshots/Screenshot%20from%202025-12-12%2020-38-13.png" width="300" /> |
+| <img src="screenshots/Screenshot%20from%202025-12-12%2020-38-29.png" width="300" /> | <img src="screenshots/Screenshot%20from%202025-12-12%2020-38-34.png" width="300" /> |
+| <img src="screenshots/Screenshot%20from%202025-12-12%2020-38-45.png" width="300" /> | <img src="screenshots/Screenshot%20from%202025-12-12%2020-38-55.png" width="300" /> |
 
 ## 📄 License
 
