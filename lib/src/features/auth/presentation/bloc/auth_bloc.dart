@@ -34,6 +34,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<CheckAuthStatus>(_onCheckAuthStatus);
     on<AuthStatusChanged>(_onAuthStatusChanged);
     on<UpdateUserProfile>(_onUpdateUserProfile);
+    // on<SignWithGoogleRequested>(_onSignWithGoogleRequested);
 
     _listenToAuthChanges(NoParams()).listen((user) {
       add(AuthStatusChanged(user));
@@ -61,6 +62,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (user) => emit(Authenticated(user)),
     );
   }
+
+  // Future<void> _onSignWithGoogleRequested(
+  //   SignWithGoogleRequested event,
+  //   Emitter<AuthState> emit,
+  // ) async {
+  //   emit(const AuthLoading());
+
+  //   try {
+  //     final user = await _authRemoteDataSource.signWithGoogle();
+  //     emit(Authenticated(user));
+  //   } catch (e) {
+  //     print('Google Sign-in Error: $e');
+  //     emit(AuthError(e.toString()));
+  //   }
+  // }
 
   Future<void> _onSignUpRequested(
     SignUpRequested event,

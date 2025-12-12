@@ -57,3 +57,7 @@ class UpdateUserProfile extends AuthEvent {
   @override
   List<Object?> get props => [displayName, phoneNumber, dateOfBirth];
 }
+
+class SignWithGoogleRequested extends AuthEvent {
+  const SignWithGoogleRequested();
+}

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import '../../../../core/errors/failures.dart';
-import '../../../../core/usecases/usecase.dart';
-import '../../data/models/user_model.dart';
-import '../repositories/auth_repository.dart';
+import 'package:ecommerce_app/src/core/errors/failures.dart';
+import 'package:ecommerce_app/src/core/usecases/usecase.dart';
+import 'package:ecommerce_app/src/features/auth/data/models/user_model.dart';
+import 'package:ecommerce_app/src/features/auth/domain/repositories/auth_repository.dart';
 
 @lazySingleton
 class GetCurrentUser implements UseCase<UserModel?, NoParams> {

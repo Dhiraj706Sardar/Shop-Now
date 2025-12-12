@@ -56,6 +56,10 @@ class _AuthPageState extends State<AuthPage>
     }
   }
 
+  void _onGoogleLogin() {
+    context.read<AuthBloc>().add(SignWithGoogleRequested());
+  }
+
   void _onSignup() {
     if (_signupFormKey.currentState?.validate() ?? false) {
       context.read<AuthBloc>().add(
@@ -299,7 +303,9 @@ class _AuthPageState extends State<AuthPage>
           children: [
             IconButtonWithBackground(
               icon: Icons.g_mobiledata, // Placeholder for Google
-              onPressed: () {},
+              onPressed: () {
+                _onGoogleLogin();
+              },
               size: 56,
             ),
             const SizedBox(width: AppTheme.spacingLg),

@@ -1,5 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ecommerce_app/src/core/errors/exceptions.dart'
     as custom_exceptions;
 import 'package:ecommerce_app/src/features/auth/data/models/user_model.dart';
@@ -15,6 +16,7 @@ abstract class AuthRemoteDataSource {
     String? phoneNumber,
     String? dateOfBirth,
   });
+  // Future<UserModel> signWithGoogle();
 }
 
 @LazySingleton(as: AuthRemoteDataSource)
@@ -44,7 +46,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         email: response.user!.email!,
         displayName: response.user!.userMetadata?['display_name'],
         photoUrl: response.user!.userMetadata?['photo_url'],
-        createdAt: DateTime.parse(response.user!.createdAt!),
+        createdAt: DateTime.parse(response.user!.createdAt),
       );
     } on AuthApiException catch (e) {
       // Handle Supabase's email not confirmed error
@@ -82,7 +84,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         email: response.user!.email!,
         displayName: response.user!.userMetadata?['display_name'],
         photoUrl: response.user!.userMetadata?['photo_url'],
-        createdAt: DateTime.parse(response.user!.createdAt!),
+        createdAt: DateTime.parse(response.user!.createdAt),
       );
     } on AuthApiException catch (e) {
       // Handle Supabase's email not confirmed error
@@ -126,7 +128,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         email: user.email!,
         displayName: user.userMetadata?['display_name'],
         photoUrl: user.userMetadata?['photo_url'],
-        createdAt: DateTime.parse(user.createdAt!),
+        createdAt: DateTime.parse(user.createdAt),
       );
     } on custom_exceptions.EmailVerificationRequiredException {
       rethrow;
@@ -145,7 +147,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         email: user.email!,
         displayName: user.userMetadata?['display_name'],
         photoUrl: user.userMetadata?['photo_url'],
-        createdAt: DateTime.parse(user.createdAt!),
+        createdAt: DateTime.parse(user.createdAt),
       );
     });
   }
@@ -176,10 +178,61 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         email: response.user!.email!,
         displayName: response.user!.userMetadata?['display_name'],
         photoUrl: response.user!.userMetadata?['photo_url'],
-        createdAt: DateTime.parse(response.user!.createdAt!),
+        createdAt: DateTime.parse(response.user!.createdAt),
       );
     } catch (e) {
       throw custom_exceptions.AuthException(e.toString());
     }
   }
+
+  // @override
+  // Future<UserModel> signWithGoogle() async {
+  //   try {
+  //     // Native Google Sign-In
+  //     // TODO: REPLACE WITH YOUR WEB CLIENT ID FROM GOOGLE CLOUD CONSOLE
+  //     const webClientId = 'YOUR_WEB_CLIENT_ID_HERE';
+
+  //     // Correct usage: Use the constructor directly
+  //     final GoogleSignIn googleSignIn = GoogleSignIn(
+  //       serverClientId: webClientId,
+  //     );
+
+  //     final googleUser = await googleSignIn.signIn();
+
+  //     if (googleUser == null) {
+  //       throw const custom_exceptions.AuthException('Google sign-in cancelled');
+  //     }
+
+  //     final googleAuth = await googleUser.authentication;
+  //     final accessToken = googleAuth.accessToken;
+  //     final idToken = googleAuth.idToken;
+
+  //     if (idToken == null) {
+  //       throw const custom_exceptions.AuthException('No ID Token found');
+  //     }
+
+  //     final response = await _supabaseClient.auth.signInWithIdToken(
+  //       provider: OAuthProvider.google,
+  //       idToken: idToken,
+  //       accessToken: accessToken,
+  //     );
+
+  //     if (response.user == null) {
+  //       throw const custom_exceptions.AuthException('Supabase sign-in failed');
+  //     }
+
+  //     return UserModel(
+  //       id: response.user!.id,
+  //       email: response.user!.email!,
+  //       displayName: response.user!.userMetadata?['display_name'] ??
+  //           response.user!.userMetadata?['full_name'],
+  //       photoUrl: response.user!.userMetadata?['photo_url'] ??
+  //           response.user!.userMetadata?['avatar_url'],
+  //       createdAt: DateTime.parse(response.user!.createdAt),
+  //     );
+  //   } catch (e) {
+  //     print('Native Google Sign-In Error: $e');
+  //     throw custom_exceptions.AuthException(e.toString());
+  //   }
+  // }
 }
