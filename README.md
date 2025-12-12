@@ -284,6 +284,16 @@ create policy "Users can create own orders"
 </a>
 
 
+
+## 📸 Screenshots
+
+|   |   |
+|---|---|
+| <img src="screenshots/Screenshot from 2025-12-12 20-36-48.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-37-30.png" width="300" /> |
+| <img src="screenshots/Screenshot from 2025-12-12 20-37-35.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-13.png" width="300" /> |
+| <img src="screenshots/Screenshot from 2025-12-12 20-38-29.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-34.png" width="300" /> |
+| <img src="screenshots/Screenshot from 2025-12-12 20-38-45.png" width="300" /> | <img src="screenshots/Screenshot from 2025-12-12 20-38-55.png" width="300" /> |
+
 ## 📄 License
 
 This project is licensed under the MIT License.
