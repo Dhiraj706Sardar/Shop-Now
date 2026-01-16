@@ -53,6 +53,9 @@ dependencies:
   google_fonts: ^6.1.0
   google_sign_in: ^7.2.0
 
+  #payment
+  flutter_paypal_payment: ^1.0.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -14,6 +14,7 @@ import '../../../orders/presentation/bloc/order_state.dart';
 import '../../../orders/data/models/order_model.dart';
 import '../../../auth/presentation/bloc/auth_bloc.dart';
 import '../../../auth/presentation/bloc/auth_state.dart';
+import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 
 @RoutePage()
 class CheckoutPage extends StatefulWidget {
@@ -25,10 +26,15 @@ class CheckoutPage extends StatefulWidget {
 
 class _CheckoutPageState extends State<CheckoutPage> {
   final _formKey = GlobalKey<FormState>();
-  final _addressController = TextEditingController();
+  final _addressController = TextEditingController();  
   final _cityController = TextEditingController();
   final _zipController = TextEditingController();
   int _selectedPaymentMethod = 0;
+
+  // PayPal Configuration
+  static const String _paypalClientId = "YOUR_PAYPAL_CLIENT_ID";
+  static const String _paypalSecretKey = "YOUR_PAYPAL_SECRET_KEY";
+  static const bool _sandboxMode = true;
 
   @override
   void dispose() {
@@ -42,20 +48,101 @@ class _CheckoutPageState extends State<CheckoutPage> {
     if (_formKey.currentState?.validate() ?? false) {
       final authState = context.read<AuthBloc>().state;
       if (authState is Authenticated) {
-        final order = OrderModel(
-          userId: authState.user.id,
-          items: cartState.items,
-          total: cartState.total,
-          status: OrderStatus.pending,
-          createdAt: DateTime.now(),
-        );
-        context.read<OrderBloc>().add(CreateOrder(order));
+        // Check if PayPal is selected
+        if (_selectedPaymentMethod == 1) {
+          _launchPayPalCheckout(cartState, authState.user.id);
+        } else {
+          // For other payment methods, create order directly
+          _createOrder(cartState, authState.user.id);
+        }
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Please login to place order')),
         );
       }
     }
+  }
+
+  void _createOrder(CartLoaded cartState, String userId) {
+    final order = OrderModel(
+      userId: userId,
+      items: cartState.items,
+      total: cartState.total,
+      status: OrderStatus.pending,
+      createdAt: DateTime.now(),
+    );
+    context.read<OrderBloc>().add(CreateOrder(order));
+  }
+
+  void _launchPayPalCheckout(CartLoaded cartState, String userId) {
+    final total = cartState.total * 1.1 + 10.00; // Including tax and shipping
+    final subtotal = cartState.total;
+    final shipping = 10.00;
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) => PaypalCheckoutView(
+          sandboxMode: _sandboxMode,
+          clientId: _paypalClientId,
+          secretKey: _paypalSecretKey,
+          transactions: [
+            {
+              "amount": {
+                "total": total.toStringAsFixed(2),
+                "currency": "USD",
+                "details": {
+                  "subtotal": subtotal.toStringAsFixed(2),
+                  "shipping": shipping.toStringAsFixed(2),
+                  "shipping_discount": 0
+                }
+              },
+              "description":
+                  "Order payment for ${cartState.items.length} items",
+              "item_list": {
+                "items": _buildPayPalItems(cartState.items),
+              }
+            }
+          ],
+          note: "Contact us for any questions on your order.",
+          onSuccess: (Map params) async {
+            print("PayPal Payment Success: $params");
+            // Create order after successful payment
+            _createOrder(cartState, userId);
+            Navigator.pop(context);
+          },
+          onError: (error) {
+            print("PayPal Payment Error: $error");
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text('Payment failed: $error'),
+                backgroundColor: AppTheme.errorColor,
+              ),
+            );
+            Navigator.pop(context);
+          },
+          onCancel: () {
+            print('PayPal Payment Cancelled');
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Payment cancelled'),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+  List<Map<String, dynamic>> _buildPayPalItems(List<dynamic> cartItems) {
+    return cartItems.map((item) {
+      // Assuming item has the structure from CartItemModel
+      return {
+        "name": item.title ?? 'Product',
+        "quantity": item.quantity ?? 1,
+        "price": (item.price ?? 0.0).toStringAsFixed(2),
+        "currency": "USD"
+      };
+    }).toList();
   }
 
   @override

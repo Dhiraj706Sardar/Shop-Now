@@ -113,6 +113,7 @@ class _AuthPageState extends State<AuthPage>
                 // Tabs
                 Container(
                   height: 50,
+                  width: double.maxFinite,
                   decoration: BoxDecoration(
                     color: AppTheme.surfaceColor,
                     borderRadius: BorderRadius.circular(AppTheme.radiusMd),
@@ -125,6 +126,8 @@ class _AuthPageState extends State<AuthPage>
                     ),
                     labelColor: Colors.white,
                     unselectedLabelColor: AppTheme.textSecondary,
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    dividerColor: Colors.transparent,
                     tabs: const [
                       Tab(text: 'Login'),
                       Tab(text: 'Sign Up'),
@@ -185,7 +188,7 @@ class _AuthPageState extends State<AuthPage>
             alignment: Alignment.centerRight,
             child: TextButton(
               onPressed: () {
-                // Forgot password
+                // Forgot password Todo
               },
               child: const Text('Forgot Password?'),
             ),
