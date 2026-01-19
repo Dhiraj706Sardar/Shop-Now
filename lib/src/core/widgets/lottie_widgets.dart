@@ -79,7 +79,7 @@ class EmptyStateWidget extends StatelessWidget {
               Container(
                 width: 120,
                 height: 120,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: AppTheme.primaryGradient,
                   shape: BoxShape.circle,
                 ),
@@ -248,13 +248,15 @@ class SuccessAnimationWidget extends StatefulWidget {
   final String message;
   final VoidCallback? onComplete;
   final Duration displayDuration;
+  final String? lottieAsset;
 
   const SuccessAnimationWidget({
     super.key,
     required this.title,
     required this.message,
     this.onComplete,
-    this.displayDuration = const Duration(seconds: 2),
+    this.displayDuration = const Duration(seconds: 3),
+    this.lottieAsset,
   });
 
   @override
@@ -264,20 +266,11 @@ class SuccessAnimationWidget extends StatefulWidget {
 class _SuccessAnimationWidgetState extends State<SuccessAnimationWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _scaleAnimation;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-    _scaleAnimation = CurvedAnimation(
-      parent: _controller,
-      curve: Curves.elasticOut,
-    );
-    _controller.forward();
+    _controller = AnimationController(vsync: this);
 
     // Auto-complete after duration
     Future.delayed(widget.displayDuration, () {
@@ -299,11 +292,18 @@ class _SuccessAnimationWidgetState extends State<SuccessAnimationWidget>
       child: Padding(
         padding: const EdgeInsets.all(AppTheme.spacingXl),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ScaleTransition(
-              scale: _scaleAnimation,
-              child: Container(
+            if (widget.lottieAsset != null)
+              LottieAnimationWidget(
+                assetPath: widget.lottieAsset!,
+                width: 200,
+                height: 200,
+                repeat: false,
+              )
+            else
+              Container(
                 width: 120,
                 height: 120,
                 decoration: BoxDecoration(
@@ -327,7 +327,6 @@ class _SuccessAnimationWidgetState extends State<SuccessAnimationWidget>
                   color: Colors.white,
                 ),
               ),
-            ),
             const SizedBox(height: AppTheme.spacingXl),
             Text(
               widget.title,

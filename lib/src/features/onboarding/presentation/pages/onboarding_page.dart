@@ -24,17 +24,17 @@ class _OnboardingPageState extends State<OnboardingPage> {
       title: 'Discover Latest Trends',
       description:
           'Explore the newest fashion trends and styles curated just for you.',
-      lottieAsset: 'assets/lottie/shopping_bag.json', // Placeholder path
+      lottieAsset: 'assets/lottie/shopping_bag.json',
     ),
     OnboardingItem(
       title: 'Easy Secure Payments',
       description: 'Pay safely and securely with our multiple payment options.',
-      lottieAsset: 'assets/lottie/payment.json', // Placeholder path
+      lottieAsset: 'assets/lottie/payment.json',
     ),
     OnboardingItem(
       title: 'Fast Delivery',
       description: 'Get your orders delivered to your doorstep in record time.',
-      lottieAsset: 'assets/lottie/delivery.json', // Placeholder path
+      lottieAsset: 'assets/lottie/delivery.json',
     ),
   ];
 

@@ -5,9 +5,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 @injectable
 class AuthGuard extends AutoRouteGuard {
-  final SupabaseClient _supabaseClient;
-
   AuthGuard(this._supabaseClient);
+  final SupabaseClient _supabaseClient;
 
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {

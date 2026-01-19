@@ -26,7 +26,7 @@ class CheckoutPage extends StatefulWidget {
 
 class _CheckoutPageState extends State<CheckoutPage> {
   final _formKey = GlobalKey<FormState>();
-  final _addressController = TextEditingController();  
+  final _addressController = TextEditingController();
   final _cityController = TextEditingController();
   final _zipController = TextEditingController();
   int _selectedPaymentMethod = 0;
@@ -381,6 +381,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 SuccessAnimationWidget(
                   title: 'Order Placed!',
                   message: 'Your order has been placed successfully.',
+                  lottieAsset: 'assets/lottie/payment.json',
                   onComplete: () {
                     // Optional: auto navigate
                   },

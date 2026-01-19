@@ -10,12 +10,6 @@ import 'product_state.dart';
 
 @injectable
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
-  final GetProducts _getProducts;
-  final GetProduct _getProduct;
-  final GetCategories _getCategories;
-
-  List<ProductModel> _allProducts = [];
-  List<String> _categories = [];
 
   ProductBloc(
     this._getProducts,
@@ -29,6 +23,12 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     on<LoadProductsByCategory>(_onLoadProductsByCategory);
     on<SortProducts>(_onSortProducts);
   }
+  final GetProducts _getProducts;
+  final GetProduct _getProduct;
+  final GetCategories _getCategories;
+
+  List<ProductModel> _allProducts = [];
+  List<String> _categories = [];
 
   Future<void> _onLoadProducts(
     LoadProducts event,

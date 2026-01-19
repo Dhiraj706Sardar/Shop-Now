@@ -4,6 +4,7 @@ import '../../core/theme/app_theme.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../router/app_router.dart';
+import '../../core/widgets/lottie_widgets.dart';
 import '../auth/presentation/bloc/auth_bloc.dart';
 import '../auth/presentation/bloc/auth_state.dart';
 import '../auth/presentation/bloc/auth_event.dart';
@@ -106,26 +107,11 @@ class _SplashPageState extends State<SplashPage>
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // App Logo/Icon
-                  Container(
-                    width: 120,
-                    height: 120,
-                    decoration: BoxDecoration(
-                      gradient: AppTheme.primaryGradient,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppTheme.primaryColor.withOpacity(0.5),
-                          blurRadius: 40,
-                          offset: const Offset(0, 20),
-                        ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.shopping_bag_outlined,
-                      size: 60,
-                      color: Colors.white,
-                    ),
+                  // Lottie Animation
+                  LottieAnimationWidget(
+                    assetPath: 'assets/lottie/delivery food splash.json',
+                    width: 300,
+                    height: 300,
                   ),
                   const SizedBox(height: AppTheme.spacingXl),
 
@@ -161,7 +147,7 @@ class _SplashPageState extends State<SplashPage>
                     child: CircularProgressIndicator(
                       strokeWidth: 3,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        Colors.white.withOpacity(0.7),
+                        AppTheme.primaryColor.withOpacity(0.7),
                       ),
                     ),
                   ),
