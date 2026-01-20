@@ -281,8 +281,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                         : TextOverflow.ellipsis,
                                   ),
                                   if (!_isDescriptionExpanded)
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 8.0),
+                                    const Padding(
+                                      padding: EdgeInsets.only(top: 8.0),
                                       child: Text(
                                         'Read More',
                                         style: TextStyle(

@@ -1,0 +1,369 @@
+Analyzing ecom...                                               
+
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/di/hive_module.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/di/hive_module.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/di/hive_module.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/di/injection.dart:3:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/exceptions.dart:3:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/exceptions.dart:8:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/exceptions.dart:13:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/exceptions.dart:18:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/exceptions.dart:23:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/failures.dart:6:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/errors/failures.dart:34:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/network/api_client.dart:3:8 • always_use_package_imports
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/theme/app_theme.dart:57:31 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/theme/app_theme.dart:65:31 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/theme/app_theme.dart:259:25 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/usecases/usecase.dart:3:8 • always_use_package_imports
+   info • The type parameter name 'Type' matches a visible type name • lib/src/core/usecases/usecase.dart:5:24 • avoid_types_as_parameter_names
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/widgets/buttons.dart:2:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/buttons.dart:15:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/buttons.dart:17:19 • always_put_required_named_parameters_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/buttons.dart:92:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/buttons.dart:93:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/buttons.dart:102:52 • deprecated_member_use
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/buttons.dart:162:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/buttons.dart:164:19 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/buttons.dart:225:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/buttons.dart:227:19 • always_put_required_named_parameters_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/buttons.dart:244:33 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/widgets/lottie_widgets.dart:3:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:13:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/lottie_widgets.dart:15:19 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:52:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/lottie_widgets.dart:54:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/lottie_widgets.dart:55:19 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:130:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:147:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:164:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:184:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/lottie_widgets.dart:253:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/lottie_widgets.dart:255:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/lottie_widgets.dart:256:19 • always_put_required_named_parameters_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/lottie_widgets.dart:318:52 • deprecated_member_use
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/product_card.dart:9:19 • always_put_required_named_parameters_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:80:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:87:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:93:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:111:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:112:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:141:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:152:55 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:190:49 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/product_card.dart:314:57 • deprecated_member_use
+   info • Required named parameters should be before optional named parameters • lib/src/core/widgets/shimmer_widgets.dart:6:50 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/shimmer_widgets.dart:24:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/core/widgets/text_fields.dart:3:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/text_fields.dart:21:9 • sort_constructors_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/text_fields.dart:104:54 • deprecated_member_use
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/text_fields.dart:152:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/core/widgets/text_fields.dart:203:9 • sort_constructors_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/core/widgets/text_fields.dart:219:33 • deprecated_member_use
+warning • Unused import: 'package:google_sign_in/google_sign_in.dart' • lib/src/features/auth/data/datasources/auth_remote_data_source.dart:3:8 • unused_import
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/data/repositories/auth_repository_impl.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/data/repositories/auth_repository_impl.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/data/repositories/auth_repository_impl.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/data/repositories/auth_repository_impl.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/data/repositories/auth_repository_impl.dart:8:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/entity/user.dart:8:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/repositories/auth_repository.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/repositories/auth_repository.dart:4:8 • always_use_package_imports
+warning • Unused import: '../../data/models/user_model.dart' • lib/src/features/auth/domain/repositories/auth_repository.dart:4:8 • unused_import
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/get_current_user.dart:12:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/listen_to_auth_changes.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/listen_to_auth_changes.dart:4:8 • always_use_package_imports
+warning • Unused import: '../../data/models/user_model.dart' • lib/src/features/auth/domain/usecases/listen_to_auth_changes.dart:4:8 • unused_import
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/listen_to_auth_changes.dart:5:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/listen_to_auth_changes.dart:11:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_in_with_email.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_in_with_email.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_in_with_email.dart:7:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/sign_in_with_email.dart:13:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/sign_in_with_email.dart:25:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_out.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_out.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_out.dart:5:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/sign_out.dart:11:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_up_with_email.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_up_with_email.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/domain/usecases/sign_up_with_email.dart:7:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/sign_up_with_email.dart:13:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/domain/usecases/sign_up_with_email.dart:25:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:10:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:11:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:12:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_bloc.dart:13:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_bloc.dart:24:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_event.dart:3:8 • always_use_package_imports
+warning • Unused import: '../../data/models/user_model.dart' • lib/src/features/auth/presentation/bloc/auth_event.dart:3:8 • unused_import
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_event.dart:16:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_event.dart:26:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_event.dart:52:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/bloc/auth_state.dart:3:8 • always_use_package_imports
+warning • Unused import: '../../data/models/user_model.dart' • lib/src/features/auth/presentation/bloc/auth_state.dart:3:8 • unused_import
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_state.dart:23:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_state.dart:36:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/bloc/auth_state.dart:45:9 • sort_constructors_first
+   info • Use 'const' with the constructor to improve performance • lib/src/features/auth/presentation/pages/auth_page.dart:60:34 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/auth/presentation/pages/auth_page.dart:291:62 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/auth/presentation/pages/auth_page.dart:300:62 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/pages/email_verification_page.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/pages/email_verification_page.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/auth/presentation/pages/email_verification_page.dart:5:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/auth/presentation/pages/email_verification_page.dart:11:9 • sort_constructors_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/auth/presentation/pages/email_verification_page.dart:29:48 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/data/repositories/cart_repository_impl.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/data/repositories/cart_repository_impl.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/data/repositories/cart_repository_impl.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/data/repositories/cart_repository_impl.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/data/repositories/cart_repository_impl.dart:8:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/cart/data/repositories/cart_repository_impl.dart:14:3 • sort_constructors_first
+   info • The file name 'Cart.dart' isn't a lower_case_with_underscores identifier • lib/src/features/cart/domain/entity/Cart.dart:1:1 • file_names
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/domain/repositories/cart_repository.dart:3:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/cart/domain/usecases/update_quantity.dart:8:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/cubit/cart_cubit.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/cubit/cart_cubit.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/cubit/cart_cubit.dart:5:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/cart/presentation/cubit/cart_cubit.dart:11:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:10:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/cart_page.dart:11:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:10:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:11:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:12:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:13:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:14:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:15:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/cart/presentation/pages/checkout_page.dart:16:8 • always_use_package_imports
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:35:41 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:36:42 • prefer_single_quotes
+   info • Use 'const' for final variables initialized to a constant value • lib/src/features/cart/presentation/pages/checkout_page.dart:80:5 • prefer_const_declarations
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:90:15 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:91:17 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:92:17 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:92:29 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:93:17 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:94:19 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:95:19 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:96:19 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:99:15 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:100:19 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:101:15 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:102:17 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:106:17 • prefer_single_quotes
+   info • Don't invoke 'print' in production code • lib/src/features/cart/presentation/pages/checkout_page.dart:108:13 • avoid_print
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:108:19 • prefer_single_quotes
+   info • Don't invoke 'print' in production code • lib/src/features/cart/presentation/pages/checkout_page.dart:114:13 • avoid_print
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:114:19 • prefer_single_quotes
+   info • Don't invoke 'print' in production code • lib/src/features/cart/presentation/pages/checkout_page.dart:124:13 • avoid_print
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:140:9 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:141:9 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:142:9 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:143:9 • prefer_single_quotes
+   info • Unnecessary use of double quotes • lib/src/features/cart/presentation/pages/checkout_page.dart:143:21 • prefer_single_quotes
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/cart/presentation/pages/checkout_page.dart:252:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/cart/presentation/pages/checkout_page.dart:308:39 • deprecated_member_use
+   info • Local variables should be final • lib/src/features/home/home_page.dart:193:19 • prefer_final_locals
+   info • Don't use 'BuildContext's across async gaps • lib/src/features/home/home_page.dart:276:66 • use_build_context_synchronously
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:323:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:540:49 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:546:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:559:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:560:45 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/home/home_page.dart:588:42 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:8:8 • always_use_package_imports
+   info • Missing an 'await' for the 'Future' computed by this expression • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:51:22 • unawaited_futures
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/onboarding/presentation/pages/onboarding_page.dart:192:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/data/datasources/order_remote_data_source.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/data/datasources/order_remote_data_source.dart:4:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/data/datasources/order_remote_data_source.dart:16:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/data/models/order_model.dart:3:8 • always_use_package_imports
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/data/models/order_model.dart:12:47 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/data/models/order_model.dart:13:34 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/data/models/order_model.dart:14:21 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/data/models/order_model.dart:15:26 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/data/repositories/order_repository_impl.dart:15:3 • sort_constructors_first
+   info • The file name 'Order.dart' isn't a lower_case_with_underscores identifier • lib/src/features/orders/domain/entity/Order.dart:1:1 • file_names
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:6:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:7:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:8:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:9:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:10:19 • always_put_required_named_parameters_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/orders/domain/entity/Order.dart:11:19 • always_put_required_named_parameters_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/domain/usecases/create_order.dart:9:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/bloc/order_bloc.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/bloc/order_bloc.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/bloc/order_bloc.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/bloc/order_event.dart:2:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_event.dart:14:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_event.dart:23:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_event.dart:32:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/bloc/order_state.dart:3:8 • always_use_package_imports
+warning • Unused import: '../../data/models/order_model.dart' • lib/src/features/orders/presentation/bloc/order_state.dart:3:8 • unused_import
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_state.dart:23:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_state.dart:32:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_state.dart:41:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/orders/presentation/bloc/order_state.dart:50:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:10:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:11:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:12:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:13:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/orders/presentation/pages/orders_page.dart:14:8 • always_use_package_imports
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/orders/presentation/pages/orders_page.dart:170:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/orders/presentation/pages/orders_page.dart:172:41 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/datasources/product_remote_data_source.dart:2:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/datasources/product_remote_data_source.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/datasources/product_remote_data_source.dart:4:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/data/datasources/product_remote_data_source.dart:17:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/models/product_model.dart:2:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/repositories/product_repository_impl.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/repositories/product_repository_impl.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/repositories/product_repository_impl.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/repositories/product_repository_impl.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/data/repositories/product_repository_impl.dart:7:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/data/repositories/product_repository_impl.dart:13:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/entities/product.dart:13:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/entities/product.dart:41:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/repositories/product_repository.dart:2:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/repositories/product_repository.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_categories.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_categories.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_categories.dart:5:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/usecases/get_categories.dart:11:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_product.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_product.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_product.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_product.dart:7:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/usecases/get_product.dart:13:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/usecases/get_product.dart:24:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_products.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_products.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_products.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/domain/usecases/get_products.dart:6:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/domain/usecases/get_products.dart:12:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_bloc.dart:9:8 • always_use_package_imports
+   info • Don't invoke 'print' in production code • lib/src/features/products/presentation/bloc/product_bloc.dart:74:9 • avoid_print
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_event.dart:3:8 • always_use_package_imports
+warning • Unused import: '../../data/models/product_model.dart' • lib/src/features/products/presentation/bloc/product_event.dart:3:8 • unused_import
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_event.dart:19:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_event.dart:32:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_event.dart:41:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_event.dart:51:9 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/products/presentation/bloc/product_state.dart:2:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_state.dart:23:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_state.dart:32:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/bloc/product_state.dart:41:9 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/products/presentation/pages/product_details_page.dart:25:9 • sort_constructors_first
+   info • Required named parameters should be before optional named parameters • lib/src/features/products/presentation/pages/product_details_page.dart:27:36 • always_put_required_named_parameters_first
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/products/presentation/pages/product_details_page.dart:64:55 • deprecated_member_use
+   info • 'pop' is deprecated and shouldn't be used. pop was renamed to maybePop to avoid confusion, if you are looking for the implementation of Navigator.pop user popForced • lib/src/features/products/presentation/pages/product_details_page.dart:69:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/products/presentation/pages/product_details_page.dart:88:61 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/products/presentation/pages/product_details_page.dart:197:60 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/src/features/products/presentation/pages/product_details_page.dart:284:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/src/features/products/presentation/pages/product_details_page.dart:286:46 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/src/features/products/presentation/pages/product_details_page.dart:288:48 • prefer_const_constructors
+   info • Unnecessary 'const' keyword • lib/src/features/products/presentation/pages/product_details_page.dart:494:21 • unnecessary_const
+   info • Unnecessary 'const' keyword • lib/src/features/products/presentation/pages/product_details_page.dart:495:21 • unnecessary_const
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/profile/pages/notifications_settings_page.dart:3:8 • always_use_package_imports
+   info • 'pop' is deprecated and shouldn't be used. pop was renamed to maybePop to avoid confusion, if you are looking for the implementation of Navigator.pop user popForced • lib/src/features/profile/pages/notifications_settings_page.dart:31:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/notifications_settings_page.dart:49:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/notifications_settings_page.dart:76:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/notifications_settings_page.dart:168:46 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/src/features/profile/pages/notifications_settings_page.dart:173:17 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/notifications_settings_page.dart:226:48 • deprecated_member_use
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/src/features/profile/pages/notifications_settings_page.dart:266:7 • deprecated_member_use
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/profile/pages/notifications_settings_page.dart:278:3 • sort_constructors_first
+   info • 'pop' is deprecated and shouldn't be used. pop was renamed to maybePop to avoid confusion, if you are looking for the implementation of Navigator.pop user popForced • lib/src/features/profile/pages/personal_information_page.dart:51:43 • deprecated_member_use
+warning • The left operand can't be null, so the right operand is never executed • lib/src/features/profile/pages/personal_information_page.dart:61:37 • dead_null_aware_expression
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/personal_information_page.dart:84:64 • deprecated_member_use
+   info • 'pop' is deprecated and shouldn't be used. pop was renamed to maybePop to avoid confusion, if you are looking for the implementation of Navigator.pop user popForced • lib/src/features/profile/pages/personal_information_page.dart:213:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/profile_page.dart:54:62 • deprecated_member_use
+warning • The left operand can't be null, so the right operand is never executed • lib/src/features/profile/pages/profile_page.dart:75:40 • dead_null_aware_expression
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/src/features/profile/pages/profile_page.dart:208:29 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/profile/pages/profile_page.dart:222:48 • deprecated_member_use
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/profile/pages/profile_page.dart:243:3 • sort_constructors_first
+   info • 'pop' is deprecated and shouldn't be used. pop was renamed to maybePop to avoid confusion, if you are looking for the implementation of Navigator.pop user popForced • lib/src/features/profile/pages/shipping_addresses_page.dart:47:43 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/src/features/profile/pages/shipping_addresses_page.dart:83:25 • prefer_const_constructors
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/profile/pages/shipping_addresses_page.dart:422:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/splash/splash_page.dart:10:8 • always_use_package_imports
+   info • Missing an 'await' for the 'Future' computed by this expression • lib/src/features/splash/splash_page.dart:65:26 • unawaited_futures
+   info • Missing an 'await' for the 'Future' computed by this expression • lib/src/features/splash/splash_page.dart:67:26 • unawaited_futures
+   info • Missing an 'await' for the 'Future' computed by this expression • lib/src/features/splash/splash_page.dart:72:28 • unawaited_futures
+   info • Missing an 'await' for the 'Future' computed by this expression • lib/src/features/splash/splash_page.dart:74:28 • unawaited_futures
+   info • Use 'const' with the constructor to improve performance • lib/src/features/splash/splash_page.dart:111:19 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/splash/splash_page.dart:150:47 • deprecated_member_use
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/data/repository/wishlist_repository_impl.dart:14:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/domain/usecases/add_to_wishlist.dart:12:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/domain/usecases/get_wishlist_items.dart:12:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/domain/usecases/is_in_wishlist.dart:11:3 • sort_constructors_first
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/domain/usecases/remove_from_wishlist.dart:11:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:9:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/features/wishlist/presentation/cubit/wishlist_cubit.dart:18:3 • sort_constructors_first
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/cubit/wishlist_state.dart:2:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:10:8 • always_use_package_imports
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/src/features/wishlist/presentation/pages/wishlist_page.dart:91:33 • deprecated_member_use
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:3:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:4:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:5:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:6:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:7:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:8:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:9:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:10:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:11:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:12:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:13:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:14:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:15:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:16:8 • always_use_package_imports
+   info • Use 'package:' imports for files in the 'lib' directory • lib/src/router/app_router.dart:17:8 • always_use_package_imports
+   info • Constructor declarations should be before non-constructor declarations • lib/src/router/app_router.dart:25:3 • sort_constructors_first
+
+365 issues found. (ran in 1.7s)

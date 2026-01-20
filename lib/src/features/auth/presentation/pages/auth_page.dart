@@ -57,7 +57,7 @@ class _AuthPageState extends State<AuthPage>
   }
 
   void _onGoogleLogin() {
-    context.read<AuthBloc>().add(SignWithGoogleRequested());
+    context.read<AuthBloc>().add(const SignWithGoogleRequested());
   }
 
   void _onSignup() {

@@ -108,7 +108,7 @@ class _SplashPageState extends State<SplashPage>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // Lottie Animation
-                  LottieAnimationWidget(
+                  const LottieAnimationWidget(
                     assetPath: 'assets/lottie/delivery food splash.json',
                     width: 300,
                     height: 300,
