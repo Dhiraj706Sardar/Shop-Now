@@ -3,12 +3,6 @@ import 'package:lottie/lottie.dart';
 import '../../core/theme/app_theme.dart';
 
 class LottieAnimationWidget extends StatelessWidget {
-  final String assetPath;
-  final double? width;
-  final double? height;
-  final bool repeat;
-  final bool reverse;
-  final AnimationController? controller;
 
   const LottieAnimationWidget({
     super.key,
@@ -19,6 +13,12 @@ class LottieAnimationWidget extends StatelessWidget {
     this.reverse = false,
     this.controller,
   });
+  final String assetPath;
+  final double? width;
+  final double? height;
+  final bool repeat;
+  final bool reverse;
+  final AnimationController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +42,6 @@ class LottieAnimationWidget extends StatelessWidget {
 }
 
 class EmptyStateWidget extends StatelessWidget {
-  final String title;
-  final String message;
-  final String? lottieAsset;
-  final IconData? icon;
-  final String? buttonText;
-  final VoidCallback? onButtonPressed;
 
   const EmptyStateWidget({
     super.key,
@@ -58,6 +52,12 @@ class EmptyStateWidget extends StatelessWidget {
     this.buttonText,
     this.onButtonPressed,
   });
+  final String title;
+  final String message;
+  final String? lottieAsset;
+  final IconData? icon;
+  final String? buttonText;
+  final VoidCallback? onButtonPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -125,9 +125,9 @@ class EmptyStateWidget extends StatelessWidget {
 }
 
 class EmptyCartWidget extends StatelessWidget {
-  final VoidCallback? onShopNow;
 
   const EmptyCartWidget({super.key, this.onShopNow});
+  final VoidCallback? onShopNow;
 
   @override
   Widget build(BuildContext context) {
@@ -142,9 +142,9 @@ class EmptyCartWidget extends StatelessWidget {
 }
 
 class EmptyWishlistWidget extends StatelessWidget {
-  final VoidCallback? onBrowseProducts;
 
   const EmptyWishlistWidget({super.key, this.onBrowseProducts});
+  final VoidCallback? onBrowseProducts;
 
   @override
   Widget build(BuildContext context) {
@@ -159,9 +159,9 @@ class EmptyWishlistWidget extends StatelessWidget {
 }
 
 class EmptyOrdersWidget extends StatelessWidget {
-  final VoidCallback? onStartShopping;
 
   const EmptyOrdersWidget({super.key, this.onStartShopping});
+  final VoidCallback? onStartShopping;
 
   @override
   Widget build(BuildContext context) {
@@ -177,9 +177,6 @@ class EmptyOrdersWidget extends StatelessWidget {
 }
 
 class ErrorStateWidget extends StatelessWidget {
-  final String title;
-  final String message;
-  final VoidCallback? onRetry;
 
   const ErrorStateWidget({
     super.key,
@@ -187,6 +184,9 @@ class ErrorStateWidget extends StatelessWidget {
     this.message = 'We encountered an error. Please try again.',
     this.onRetry,
   });
+  final String title;
+  final String message;
+  final VoidCallback? onRetry;
 
   @override
   Widget build(BuildContext context) {
@@ -244,11 +244,6 @@ class ErrorStateWidget extends StatelessWidget {
 }
 
 class SuccessAnimationWidget extends StatefulWidget {
-  final String title;
-  final String message;
-  final VoidCallback? onComplete;
-  final Duration displayDuration;
-  final String? lottieAsset;
 
   const SuccessAnimationWidget({
     super.key,
@@ -258,6 +253,11 @@ class SuccessAnimationWidget extends StatefulWidget {
     this.displayDuration = const Duration(seconds: 3),
     this.lottieAsset,
   });
+  final String title;
+  final String message;
+  final VoidCallback? onComplete;
+  final Duration displayDuration;
+  final String? lottieAsset;
 
   @override
   State<SuccessAnimationWidget> createState() => _SuccessAnimationWidgetState();
