@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/auth/data/models/user_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../core/errors/failures.dart';
@@ -166,7 +167,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         phoneNumber: event.phoneNumber,
         dateOfBirth: event.dateOfBirth,
       );
-      emit(Authenticated(updatedUser));
+      emit(Authenticated(updatedUser.toUser()));
     } catch (e) {
       emit(AuthError(e.toString()));
       // Restore previous state

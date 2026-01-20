@@ -18,14 +18,14 @@ class CartCubit extends Cubit<CartState> {
     result.fold(
       (failure) => emit(CartError(failure.message)),
       (items) {
-        final total = _calculateTotal(items);
-        emit(CartLoaded(items: items, total: total));
+        final total = _calculateTotal(items.map((item) => item.toCartItemModel()).toList());
+        emit(CartLoaded(items: items.map((item) => item.toCartItemModel()).toList(), total: total));
       },
     );
   }
 
   Future<void> addToCart(CartItemModel item) async {
-    final result = await _repository.addToCart(item);
+    final result = await _repository.addToCart(item.toCart());
 
     result.fold(
       (failure) => emit(CartError(failure.message)),

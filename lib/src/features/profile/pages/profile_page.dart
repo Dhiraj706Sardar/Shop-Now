@@ -72,7 +72,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                         const SizedBox(height: AppTheme.spacingMd),
                         Text(
-                          user.displayName ?? user.email.split('@')[0],
+                          user.name ?? user.email.split('@')[0],
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: AppTheme.spacingXs),

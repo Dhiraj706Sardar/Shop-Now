@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/cart/domain/entity/Cart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
 
@@ -17,4 +18,26 @@ class CartItemModel with _$CartItemModel {
 
   factory CartItemModel.fromJson(Map<String, dynamic> json) =>
       _$CartItemModelFromJson(json);
+}
+extension CartItemModelExtension on CartItemModel {
+  Cart toCart() {
+    return Cart(
+      productId: productId,
+      title: title,
+      price: price,
+      image: image,
+      quantity: quantity,
+    );
+  }
+}
+extension CartExtension on Cart {
+  CartItemModel toCartItemModel() {
+    return CartItemModel(
+      productId: productId,
+      title: title,
+      price: price,
+      image: image,
+      quantity: quantity,
+    );
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/src/features/auth/domain/entity/user.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failures.dart';
@@ -8,18 +9,18 @@ import '../models/user_model.dart';
 
 @LazySingleton(as: AuthRepository)
 class AuthRepositoryImpl implements AuthRepository {
+  AuthRepositoryImpl(this._remoteDataSource);
   final AuthRemoteDataSource _remoteDataSource;
 
-  AuthRepositoryImpl(this._remoteDataSource);
-
   @override
-  Future<Either<Failure, UserModel>> signInWithEmail(
+  Future<Either<Failure, User>> signInWithEmail(
     String email,
     String password,
   ) async {
     try {
-      final user = await _remoteDataSource.signInWithEmail(email, password);
-      return Right(user);
+      final usermodel =
+          await _remoteDataSource.signInWithEmail(email, password);
+      return Right(usermodel.toUser());
     } on EmailVerificationRequiredException catch (e) {
       return Left(EmailVerificationRequiredFailure(e.email));
     } on AuthException catch (e) {
@@ -30,13 +31,14 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserModel>> signUpWithEmail(
+  Future<Either<Failure, User>> signUpWithEmail(
     String email,
     String password,
   ) async {
     try {
-      final user = await _remoteDataSource.signUpWithEmail(email, password);
-      return Right(user);
+      final usermodel =
+          await _remoteDataSource.signUpWithEmail(email, password);
+      return Right(usermodel.toUser());
     } on AuthException catch (e) {
       return Left(AuthFailure(e.message));
     } on EmailVerificationRequiredException catch (e) {
@@ -59,10 +61,10 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserModel?>> getCurrentUser() async {
+  Future<Either<Failure, User?>> getCurrentUser() async {
     try {
-      final user = await _remoteDataSource.getCurrentUser();
-      return Right(user);
+      final usermodel = await _remoteDataSource.getCurrentUser();
+      return Right(usermodel?.toUser());
     } on EmailVerificationRequiredException catch (e) {
       return Left(EmailVerificationRequiredFailure(e.email));
     } on AuthException catch (e) {
@@ -73,5 +75,6 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Stream<UserModel?> get authStateChanges => _remoteDataSource.authStateChanges;
+  Stream<User?> get authStateChanges => _remoteDataSource.authStateChanges
+      .map((usermodel) => usermodel?.toUser());
 }

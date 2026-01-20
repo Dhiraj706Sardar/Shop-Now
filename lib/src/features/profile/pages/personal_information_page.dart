@@ -58,7 +58,7 @@ class _PersonalInformationPageState extends State<PersonalInformationPage> {
             if (_emailController.text.isEmpty) {
               _emailController.text = state.user.email;
               _nameController.text =
-                  state.user.displayName ?? state.user.email.split('@')[0];
+                  state.user.name?? state.user.email.split('@')[0];
               // Note: Phone and DOB would need to be added to UserModel or fetched from metadata
             }
 

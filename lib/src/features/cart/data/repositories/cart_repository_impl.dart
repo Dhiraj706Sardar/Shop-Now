@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/src/features/cart/domain/entity/Cart.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failures.dart';
@@ -13,10 +14,10 @@ class CartRepositoryImpl implements CartRepository {
   CartRepositoryImpl(this._localDataSource);
 
   @override
-  Future<Either<Failure, List<CartItemModel>>> getCartItems() async {
+  Future<Either<Failure, List<Cart>>> getCartItems() async {
     try {
       final items = await _localDataSource.getCartItems();
-      return Right(items);
+      return Right(items.map((item) => item.toCart()).toList());
     } on CacheException catch (e) {
       return Left(CacheFailure(e.message));
     } catch (e) {
@@ -25,9 +26,9 @@ class CartRepositoryImpl implements CartRepository {
   }
 
   @override
-  Future<Either<Failure, void>> addToCart(CartItemModel item) async {
+  Future<Either<Failure, void>> addToCart(Cart cart) async {
     try {
-      await _localDataSource.addToCart(item);
+      await _localDataSource.addToCart(cart.toCartItemModel());
       return const Right(null);
     } on CacheException catch (e) {
       return Left(CacheFailure(e.message));

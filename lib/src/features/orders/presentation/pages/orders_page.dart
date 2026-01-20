@@ -26,7 +26,7 @@ class _OrdersPageState extends State<OrdersPage> {
   void initState() {
     super.initState();
     final authState = context.read<AuthBloc>().state;
-    if (authState is Authenticated) {
+    if (authState is Authenticated && authState.user.id.isNotEmpty) {
       context.read<OrderBloc>().add(LoadOrders(authState.user.id));
     }
   }
@@ -53,7 +53,7 @@ class _OrdersPageState extends State<OrdersPage> {
                   const SizedBox(height: AppTheme.spacingMd),
               itemBuilder: (context, index) {
                 final order = state.orders[index];
-                return _buildOrderCard(context, order);
+                return _buildOrderCard(context, order.toOrderModel());
               },
             );
           } else if (state is OrderError) {

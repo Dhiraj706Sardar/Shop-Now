@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/auth/domain/entity/user.dart';
 import 'package:equatable/equatable.dart';
 import '../../data/models/user_model.dart';
 
@@ -37,8 +38,8 @@ class CheckAuthStatus extends AuthEvent {
 }
 
 class AuthStatusChanged extends AuthEvent {
-  final UserModel? user;
   const AuthStatusChanged(this.user);
+  final User? user;
   @override
   List<Object?> get props => [user];
 }

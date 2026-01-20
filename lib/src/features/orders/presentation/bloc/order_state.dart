@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/orders/domain/entity/Order.dart';
 import 'package:equatable/equatable.dart';
 import '../../data/models/order_model.dart';
 
@@ -17,7 +18,7 @@ class OrderLoading extends OrderState {
 }
 
 class OrderCreated extends OrderState {
-  final OrderModel order;
+  final Order order;
 
   const OrderCreated(this.order);
 
@@ -26,7 +27,7 @@ class OrderCreated extends OrderState {
 }
 
 class OrdersLoaded extends OrderState {
-  final List<OrderModel> orders;
+  final List<Order> orders;
 
   const OrdersLoaded(this.orders);
 
@@ -35,7 +36,7 @@ class OrdersLoaded extends OrderState {
 }
 
 class OrderLoaded extends OrderState {
-  final OrderModel order;
+  final Order order;
 
   const OrderLoaded(this.order);
 

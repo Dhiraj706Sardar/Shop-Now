@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/auth/domain/entity/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_model.freezed.dart';
@@ -15,4 +16,17 @@ class UserModel with _$UserModel {
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
+}
+
+// mapper for user entity
+extension UserModelExtension on UserModel {
+  User toUser() {
+    return User(
+      id: id,
+      email: email,
+      name: displayName ?? '',
+      photoUrl: photoUrl ?? '',
+      createdAt: createdAt ?? DateTime.now(),
+    );
+  }
 }

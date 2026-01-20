@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/auth/domain/entity/user.dart';
 import 'package:equatable/equatable.dart';
 import '../../data/models/user_model.dart';
 
@@ -17,7 +18,7 @@ class AuthLoading extends AuthState {
 }
 
 class Authenticated extends AuthState {
-  final UserModel user;
+  final User user;
 
   const Authenticated(this.user);
 
