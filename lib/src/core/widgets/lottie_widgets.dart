@@ -199,8 +199,8 @@ class ErrorStateWidget extends StatelessWidget {
             Container(
               width: 120,
               height: 120,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
                   colors: [AppTheme.errorColor, Color(0xFFFF8787)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,

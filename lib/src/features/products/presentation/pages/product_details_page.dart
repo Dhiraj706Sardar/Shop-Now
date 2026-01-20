@@ -14,6 +14,9 @@ import 'package:ecommerce_app/src/features/products/presentation/bloc/product_ev
 import 'package:ecommerce_app/src/features/products/presentation/bloc/product_state.dart';
 import 'package:ecommerce_app/src/features/cart/presentation/cubit/cart_cubit.dart';
 import 'package:ecommerce_app/src/features/cart/data/models/cart_item_model.dart';
+import 'package:ecommerce_app/src/features/wishlist/presentation/cubit/wishlist_cubit.dart';
+import 'package:ecommerce_app/src/features/wishlist/presentation/cubit/wishlist_state.dart';
+import 'package:ecommerce_app/src/features/wishlist/data/models/wishlist_item_model.dart';
 
 @RoutePage()
 class ProductDetailsPage extends StatefulWidget {
@@ -71,6 +74,51 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                         ),
                       ),
                     ),
+                    actions: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: BlocBuilder<WishlistCubit, WishlistState>(
+                          builder: (context, state) {
+                            final isInWishlist = state.maybeWhen(
+                              loaded: (items) => items.any(
+                                  (item) => item.productId == widget.productId),
+                              orElse: () => false,
+                            );
+                            return CircleAvatar(
+                              backgroundColor: Colors.black.withOpacity(0.5),
+                              child: IconButton(
+                                icon: Icon(
+                                  isInWishlist
+                                      ? Icons.favorite
+                                      : Icons.favorite_border,
+                                  color:
+                                      isInWishlist ? Colors.red : Colors.white,
+                                ),
+                                onPressed: () {
+                                  if (state is WishlistLoaded) {
+                                    final product = (context
+                                            .read<ProductBloc>()
+                                            .state as ProductLoaded)
+                                        .product
+                                        .toEntity();
+                                    final wishlistItem = WishlistItemModel(
+                                      productId: product.id,
+                                      title: product.name,
+                                      price: product.price,
+                                      image: product.imageUrl,
+                                      addedAt: DateTime.now(),
+                                    );
+                                    context
+                                        .read<WishlistCubit>()
+                                        .toggleWishlist(wishlistItem);
+                                  }
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                     flexibleSpace: FlexibleSpaceBar(
                       background: Stack(
                         children: [
@@ -428,17 +476,17 @@ class _ProductDetailsShimmer extends StatelessWidget {
                         ),
                       ],
                     ),
-                     SizedBox(height: AppTheme.spacingMd),
-                     ShimmerBox(
+                    SizedBox(height: AppTheme.spacingMd),
+                    ShimmerBox(
                       width: double.infinity,
                       height: 32,
                     ),
-                     SizedBox(height: AppTheme.spacingSm),
-                     ShimmerBox(
+                    SizedBox(height: AppTheme.spacingSm),
+                    ShimmerBox(
                       width: 200,
                       height: 32,
                     ),
-                     SizedBox(height: AppTheme.spacingLg),
+                    SizedBox(height: AppTheme.spacingLg),
                     ShimmerBox(
                       width: 100,
                       height: 24,

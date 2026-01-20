@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/wishlist/domain/entity/wishlist.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
 
@@ -17,4 +18,28 @@ class WishlistItemModel with _$WishlistItemModel {
 
   factory WishlistItemModel.fromJson(Map<String, dynamic> json) =>
       _$WishlistItemModelFromJson(json);
+}
+
+extension WishlistItemModelX on WishlistItemModel {
+  Wishlist toWishlist() {
+    return Wishlist(
+      productId: productId,
+      title: title,
+      price: price,
+      image: image,
+      addedAt: addedAt,
+    );
+  }
+}
+
+extension WishlistX on Wishlist {
+  WishlistItemModel toWishlistItemModel() {
+    return WishlistItemModel(
+      productId: productId,
+      title: title,
+      price: price,
+      image: image,
+      addedAt: addedAt,
+    );
+  }
 }

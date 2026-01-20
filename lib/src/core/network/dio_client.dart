@@ -3,8 +3,13 @@ import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:ecommerce_app/src/core/constants/api_constants.dart';
 
+import 'package:ecommerce_app/src/core/network/api_client.dart';
+
 @module
 abstract class DioModule {
+  @lazySingleton
+  ApiClient apiClient(Dio dio) => ApiClient(dio);
+
   @lazySingleton
   Dio get dio {
     final dio = Dio(
