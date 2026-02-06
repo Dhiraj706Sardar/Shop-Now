@@ -1,0 +1,261 @@
+name: Flutter CI/CD Pipeline
+
+on:
+    push:
+        branches: ["main", "develop"]
+    pull_request:
+        branches: ["main"]
+    workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+    build-and-test:
+        name: Build, Test & Generate APK
+        runs-on: ubuntu-latest
+
+        steps:
+            # ============================================
+            # STEP 1: Checkout Repository
+            # ============================================
+            - name: 📥 Checkout code
+              uses: actions/checkout@v4
+
+            # ============================================
+            # STEP 2: Setup Java (Required for Android)
+            # ============================================
+            - name: ☕ Setup Java
+              uses: actions/setup-java@v3
+              with:
+                  distribution: "zulu"
+                  java-version: "17"
+
+            # ============================================
+            # STEP 3: Setup Flutter SDK
+            # ============================================
+            - name: 🐦 Setup Flutter
+              uses: subosito/flutter-action@v2
+              with:
+                  channel: "stable"
+                  flutter-version: "3.x" # Use specific version if needed (e.g., '3.16.0')
+                  cache: true # Cache Flutter SDK for faster builds
+
+            # ============================================
+            # STEP 4: Verify Flutter Installation
+            # ============================================
+            - name: 🔍 Verify Flutter Installation
+              run: |
+                  flutter --version
+                  flutter doctor -v
+
+            # ============================================
+            # STEP 5: Get Flutter Dependencies
+            # ============================================
+            - name: 📦 Install dependencies
+              run: flutter pub get
+
+            # ============================================
+            # STEP 6: Code Analysis
+            # ============================================
+            - name: 🔎 Analyze code
+              run: flutter analyze
+              continue-on-error: true # Don't fail build on analysis warnings
+
+            # ============================================
+            # STEP 7: Run Unit & Widget Tests
+            # ============================================
+            - name: 🧪 Run tests
+              run: flutter test
+              continue-on-error: false # Fail build if tests fail
+
+            # ============================================
+            # STEP 8: Build Debug APK
+            # ============================================
+            - name: 🔨 Build Debug APK
+              run: flutter build apk --debug
+
+            # ============================================
+            # STEP 9: Build Release APK
+            # ============================================
+            # NOTE: This builds a release APK without signing
+            # For signed APK, uncomment the signing steps below
+            - name: 🏗️ Build Release APK
+              run: flutter build apk --release
+
+            # ============================================
+            # STEP 10: Upload Debug APK as Artifact
+            # ============================================
+            - name: 📤 Upload Debug APK
+              uses: actions/upload-artifact@v3
+              with:
+                  name: app-debug
+                  path: build/app/outputs/flutter-apk/app-debug.apk
+                  retention-days: 7
+
+            # ============================================
+            # STEP 11: Upload Release APK as Artifact
+            # ============================================
+            - name: 📤 Upload Release APK
+              uses: actions/upload-artifact@v3
+              with:
+                  name: app-release
+                  path: build/app/outputs/flutter-apk/app-release.apk
+                  retention-days: 30
+
+            # ============================================
+            # STEP 12: Create Release Notes
+            # ============================================
+            - name: 📝 Generate Build Info
+              run: |
+                  echo "Build completed successfully!" > build_info.txt
+                  echo "Branch: ${{ github.ref_name }}" >> build_info.txt
+                  echo "Commit: ${{ github.sha }}" >> build_info.txt
+                  echo "Build Time: $(date)" >> build_info.txt
+
+            - name: 📤 Upload Build Info
+              uses: actions/upload-artifact@v3
+              with:
+                  name: build-info
+                  path: build_info.txt
+                  retention-days: 30
+# ============================================
+# OPTIONAL: SIGNED APK BUILD JOB
+# ============================================
+# Uncomment this job if you want to build a signed APK
+# You need to setup GitHub secrets first:
+#   - KEYSTORE_BASE64: Base64 encoded keystore file
+#   - KEYSTORE_PASSWORD: Keystore password
+#   - KEY_ALIAS: Key alias
+#   - KEY_PASSWORD: Key password
+
+#  build-signed-apk:
+#    name: Build Signed APK
+#    runs-on: ubuntu-latest
+#    needs: build-and-test  # Only run after tests pass
+#
+#    steps:
+#      - name: 📥 Checkout code
+#        uses: actions/checkout@v4
+#
+#      - name: ☕ Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'zulu'
+#          java-version: '17'
+#
+#      - name: 🐦 Setup Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
+#          flutter-version: '3.x'
+#          cache: true
+#
+#      - name: 📦 Install dependencies
+#        run: flutter pub get
+#
+#      # Decode keystore from base64
+#      - name: 🔐 Decode Keystore
+#        run: |
+#          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/upload-keystore.jks
+#
+#      # Create key.properties file
+#      - name: 📝 Create key.properties
+#        run: |
+#          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
+#          echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+#          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+#          echo "storeFile=upload-keystore.jks" >> android/key.properties
+#
+#      # Build signed APK
+#      - name: 🏗️ Build Signed APK
+#        run: flutter build apk --release
+#
+#      # Upload signed APK
+#      - name: 📤 Upload Signed APK
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: app-release-signed
+#          path: build/app/outputs/flutter-apk/app-release.apk
+#          retention-days: 90
+
+# ============================================
+# OPTIONAL: PLAY STORE DEPLOYMENT JOB
+# ============================================
+# Uncomment this job to deploy to Google Play Store
+# You need to setup GitHub secrets:
+#   - PLAY_STORE_SERVICE_ACCOUNT_JSON: Service account JSON from Google Play Console
+
+#  deploy-to-playstore:
+#    name: Deploy to Play Store
+#    runs-on: ubuntu-latest
+#    needs: build-signed-apk  # Only deploy after signed APK is built
+#
+#    steps:
+#      - name: 📥 Checkout code
+#        uses: actions/checkout@v4
+#
+#      - name: ☕ Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'zulu'
+#          java-version: '17'
+#
+#      - name: 🐦 Setup Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
+#          flutter-version: '3.x'
+#          cache: true
+#
+#      - name: 📦 Install dependencies
+#        run: flutter pub get
+#
+#      # Decode keystore
+#      - name: 🔐 Decode Keystore
+#        run: |
+#          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/upload-keystore.jks
+#
+#      # Create key.properties
+#      - name: 📝 Create key.properties
+#        run: |
+#          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
+#          echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+#          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+#          echo "storeFile=upload-keystore.jks" >> android/key.properties
+#
+#      # Build App Bundle for Play Store
+#      - name: 📦 Build App Bundle (AAB)
+#        run: flutter build appbundle --release
+#
+#      # Deploy to Play Store Internal Track
+#      - name: 🚀 Deploy to Play Store (Internal Track)
+#        uses: r0adkll/upload-google-play@v1.1.2
+#        with:
+#          serviceAccountJsonPlainText: ${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}
+#          packageName: com.zilcommerce.shop  # Replace with your package name
+#          releaseFiles: build/app/outputs/bundle/release/app-release.aab
+#          track: internal  # Options: internal, alpha, beta, production
+#          status: completed  # Options: completed, draft
+#          inAppUpdatePriority: 2  # Priority for in-app updates (0-5)
+#          # whatsNewDirectory: distribution/whatsnew  # Optional: Release notes directory
+#
+#      # Optional: Deploy to Beta Track
+#      # - name: 🚀 Deploy to Play Store (Beta Track)
+#      #   uses: r0adkll/upload-google-play@v1.1.2
+#      #   with:
+#      #     serviceAccountJsonPlainText: ${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}
+#      #     packageName: com.zilcommerce.shop
+#      #     releaseFiles: build/app/outputs/bundle/release/app-release.aab
+#      #     track: beta
+#      #     status: completed
+#      #     userFraction: 0.5  # Roll out to 50% of users
+#      #     inAppUpdatePriority: 3
+#
+#      # Optional: Deploy to Production
+#      # - name: 🚀 Deploy to Play Store (Production)
+#      #   uses: r0adkll/upload-google-play@v1.1.2
+#      #   with:
+#      #     serviceAccountJsonPlainText: ${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}
+#      #     packageName: com.zilcommerce.shop
+#      #     releaseFiles: build/app/outputs/bundle/release/app-release.aab
+#      #     track: production
+#      #     status: completed
+#      #     inAppUpdatePriority: 5  # High priority for production updates

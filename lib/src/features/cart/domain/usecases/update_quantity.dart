@@ -4,8 +4,8 @@ import 'package:ecommerce_app/src/core/usecases/usecase.dart';
 import 'package:ecommerce_app/src/features/cart/domain/repositories/cart_repository.dart';
 
 class UpdateQuantity implements UseCase<void, (int productId, int quantity)> {
-  final CartRepository _cartRepository;
   UpdateQuantity(this._cartRepository);
+  final CartRepository _cartRepository;
 
   @override
   Future<Either<Failure, void>> call(

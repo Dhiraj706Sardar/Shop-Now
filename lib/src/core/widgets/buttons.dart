@@ -2,15 +2,6 @@ import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 
 class PrimaryButton extends StatefulWidget {
-  final String text;
-  final VoidCallback? onPressed;
-  final bool isLoading;
-  final bool isFullWidth;
-  final IconData? icon;
-  final Gradient? gradient;
-  final double? height;
-  final double? width;
-  final double? fontSize;
 
   const PrimaryButton({
     super.key,
@@ -24,6 +15,15 @@ class PrimaryButton extends StatefulWidget {
     this.width,
     this.fontSize,
   });
+  final String text;
+  final VoidCallback? onPressed;
+  final bool isLoading;
+  final bool isFullWidth;
+  final IconData? icon;
+  final Gradient? gradient;
+  final double? height;
+  final double? width;
+  final double? fontSize;
 
   @override
   State<PrimaryButton> createState() => _PrimaryButtonState();

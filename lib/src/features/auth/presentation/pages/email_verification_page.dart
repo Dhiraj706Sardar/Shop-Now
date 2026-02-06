@@ -6,12 +6,12 @@ import '../../../../router/app_router.dart';
 
 @RoutePage()
 class EmailVerificationPage extends StatelessWidget {
-  final String? email;
 
   const EmailVerificationPage({
     super.key,
     this.email,
   });
+  final String? email;
 
   @override
   Widget build(BuildContext context) {

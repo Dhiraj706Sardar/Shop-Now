@@ -18,8 +18,11 @@ class CartCubit extends Cubit<CartState> {
     result.fold(
       (failure) => emit(CartError(failure.message)),
       (items) {
-        final total = _calculateTotal(items.map((item) => item.toCartItemModel()).toList());
-        emit(CartLoaded(items: items.map((item) => item.toCartItemModel()).toList(), total: total));
+        final total = _calculateTotal(
+            items.map((item) => item.toCartItemModel()).toList());
+        emit(CartLoaded(
+            items: items.map((item) => item.toCartItemModel()).toList(),
+            total: total));
       },
     );
   }

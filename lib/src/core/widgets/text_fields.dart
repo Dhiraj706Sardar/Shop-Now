@@ -3,20 +3,6 @@ import 'package:flutter/services.dart';
 import '../../core/theme/app_theme.dart';
 
 class CustomTextField extends StatefulWidget {
-  final String? label;
-  final String? hint;
-  final TextEditingController? controller;
-  final TextInputType? keyboardType;
-  final bool obscureText;
-  final String? Function(String?)? validator;
-  final void Function(String)? onChanged;
-  final IconData? prefixIcon;
-  final Widget? suffixIcon;
-  final int? maxLines;
-  final int? maxLength;
-  final List<TextInputFormatter>? inputFormatters;
-  final bool enabled;
-  final FocusNode? focusNode;
 
   const CustomTextField({
     super.key,
@@ -35,6 +21,20 @@ class CustomTextField extends StatefulWidget {
     this.enabled = true,
     this.focusNode,
   });
+  final String? label;
+  final String? hint;
+  final TextEditingController? controller;
+  final TextInputType? keyboardType;
+  final bool obscureText;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+  final IconData? prefixIcon;
+  final Widget? suffixIcon;
+  final int? maxLines;
+  final int? maxLength;
+  final List<TextInputFormatter>? inputFormatters;
+  final bool enabled;
+  final FocusNode? focusNode;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -142,12 +142,6 @@ class _CustomTextFieldState extends State<CustomTextField>
 }
 
 class PasswordTextField extends StatefulWidget {
-  final String? label;
-  final String? hint;
-  final TextEditingController? controller;
-  final String? Function(String?)? validator;
-  final void Function(String)? onChanged;
-  final FocusNode? focusNode;
 
   const PasswordTextField({
     super.key,
@@ -158,6 +152,12 @@ class PasswordTextField extends StatefulWidget {
     this.onChanged,
     this.focusNode,
   });
+  final String? label;
+  final String? hint;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+  final FocusNode? focusNode;
 
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
@@ -195,10 +195,6 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
 }
 
 class SearchTextField extends StatelessWidget {
-  final String? hint;
-  final TextEditingController? controller;
-  final void Function(String)? onChanged;
-  final VoidCallback? onFilterTap;
 
   const SearchTextField({
     super.key,
@@ -207,6 +203,10 @@ class SearchTextField extends StatelessWidget {
     this.onChanged,
     this.onFilterTap,
   });
+  final String? hint;
+  final TextEditingController? controller;
+  final void Function(String)? onChanged;
+  final VoidCallback? onFilterTap;
 
   @override
   Widget build(BuildContext context) {
