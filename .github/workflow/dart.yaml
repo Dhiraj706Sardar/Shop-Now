@@ -2,66 +2,66 @@ name: Flutter CI/CD
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: ["main", "develop"]
   pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:  # Allows manual trigger
+    branches: ["main"]
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    
+
     steps:
       # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       # Step 2: Setup Java (Required for Android builds)
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'zulu'
-          java-version: '17'
-      
+          distribution: "zulu"
+          java-version: "17"
+
       # Step 3: Setup Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
-          flutter-version: '3.x'  # or specific version like '3.16.0'
-      
+          channel: "stable"
+          flutter-version: "3.x" # or specific version like '3.16.0'
+
       # Step 4: Get Flutter dependencies
       - name: Install dependencies
         run: flutter pub get
-      
+
       # Step 5: Analyze code
       - name: Analyze code
         run: flutter analyze
-      
+
       # Step 6: Run tests
       - name: Run tests
         run: flutter test
-      
+
       # Step 7: Build APK (Debug)
       - name: Build Debug APK
         run: flutter build apk --debug
-      
+
       # Step 8: Build APK (Release)
       - name: Build Release APK
         run: flutter build apk --release
-      
+
       # Step 9: Upload APK as artifact
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
           retention-days: 30
-      
+
       # Step 10 (Optional): Build App Bundle for Play Store
       # - name: Build App Bundle
       #   run: flutter build appbundle --release
-      
+
       # Step 11 (Optional): Upload to Play Store
       # - name: Deploy to Play Store
       #   uses: r0adkll/upload-google-play@v1
